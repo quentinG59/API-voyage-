@@ -6,7 +6,7 @@ const Tour = (props) => {
     <>
       <section className="container">
         <div className="card">
-          <img src={props.image} alt="image de voyage" />
+          <img src={props.image} alt={props.name} />
           <div className="info">
             <h3>{props.name}</h3>
             <p>{props.price}</p>

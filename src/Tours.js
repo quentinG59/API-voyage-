@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import App from "./App";
 import Tour from "./Tour";
 const Tours = ({ voyages, removeItem, refresh }) => {
   console.log(voyages);
