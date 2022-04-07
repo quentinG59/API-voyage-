@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-const Tour = (props) => {
+const Tour = ({ removeItem, id, name, info, image, price }) => {
   const [ReadMore, setReadMore] = useState(false);
   return (
     <>
       <section className="container">
         <div className="card">
-          <img src={props.image} alt={props.name} />
+          <img src={image} alt={name} />
           <div className="info">
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
+            <h3>{name}</h3>
+            <p>{price}</p>
           </div>
           <div className="card-info">
             <p className="description">
-              {ReadMore ? props.info : props.info.substring(0, 200)}
+              {ReadMore ? info : info.substring(0, 200)}
               <button
                 className="btn read"
                 onClick={() => setReadMore(!ReadMore)}
@@ -21,7 +21,7 @@ const Tour = (props) => {
                 {ReadMore ? "readless" : "readmore"}
               </button>
             </p>
-            <button className="btn" onClick={() => props.removeItem(props.id)}>
+            <button className="btn" onClick={() => removeItem(id)}>
               pas intéressé
             </button>
           </div>
